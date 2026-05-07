@@ -15,12 +15,12 @@ public class SitioController : Controller
         Cliente cliente = new Cliente();
         if(cliente.esApto(edad, ingresoMensual, estaTrabajando, montoSolicitado, deudasPrevias))
         {
-            return View();
+            ViewBag.Esapto = "Felicidades! Sos apto para el prestamo!!! 😀😀😀";
         }
         else
         {
-            return View("NoEsApto");
+           ViewBag.Esapto = "no sos apto bra 😢😢😢";
         }
-
+        return View();
     }
 }
