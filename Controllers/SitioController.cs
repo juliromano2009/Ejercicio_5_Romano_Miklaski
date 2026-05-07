@@ -4,13 +4,13 @@ using Ejercicio5.Models;
 
 namespace Ejercicio5.Controllers;
 
-public class HomeController : Controller
+public class SitioController : Controller
 {
     public IActionResult Index()
     {
         return View();
     }
-    public iActionResult EsApto(int edad, double ingresoMensual, bool estaTrabajando, double montoSolicitado, double deudasPrevias)
+    public IActionResult EsApto(int edad, double ingresoMensual, bool estaTrabajando, double montoSolicitado, bool deudasPrevias)
     {
         Cliente cliente = new Cliente();
         if(cliente.esApto(edad, ingresoMensual, estaTrabajando, montoSolicitado, deudasPrevias))
